@@ -1,0 +1,171 @@
+.songDetail_total {
+    box-sizing: border-box;
+    overflow-y: scroll!important;
+    height: calc(100vh  - 3.8rem);
+    .songDetail {
+        box-sizing: border-box;
+        @keyframes circle {
+            0%{transform:rotate(0deg )}
+            100%{transform: rotate(360deg );}
+            
+        }
+        transform: translateY(60px);
+       
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        place-items: center;
+        
+        .songDetail_left {
+            position: relative;
+            grid-area: left;
+            .songDetail_left_play {
+                width:300px;
+                height:300px
+            }
+            .songDetail_left_aag {
+                position: relative;
+                z-index: 999;
+                top:40px;
+                left:150px;
+                width:130px;
+                height: 130px;
+             
+            }
+            .songDetail_twoImg {
+                .songDetail_songimg {
+                    position: absolute;
+                    z-index: 999;
+                    top:230px;
+                    left:100px;
+                    width:100px;
+                    height:100px;
+                    border-radius: 50%;
+                }
+     
+            }
+           
+            .songDetailPlaying {
+                transform-origin: 50px 30px;
+                transition: all 0.3s linear;
+                transform:  rotate(23deg);
+            }
+            .circleSelected {
+                animation-name: circle;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+              
+            }
+           
+    
+        }
+        .songDetail_center {
+            display: flex;
+        
+      
+           
+               
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .songDetail_center_song {
+                    padding-top: 1rem;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                .songDetail_center_writer{
+                    color:#888;
+                    
+                }
+                .songDetail_center_lyric {
+                    
+                    position: relative;
+                    height:50vh;
+                    overflow-y: scroll;
+                    margin-top: 20px;
+                    
+                    .lyric_item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color:#888;
+                        position: relative;
+                        .lyric_item_time {
+                            display: none;
+                            position: relative;
+                            right:0px;
+                            top:0;
+                            z-index: 999;
+                           
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            .lyric_item_time {
+                                display:block!important;
+                                position: relative;
+                                right:0px;
+                                top:0;
+                                z-index: 999; 
+                            }
+                        }
+     
+                    }
+                    .selectLyric {
+                        transform: scale(1.1);
+                        font-weight: 500;
+                        color:black
+                    }
+                    .showTime {
+                        display: block;
+                        position: relative;
+                        right:0px;
+                        top:0;
+                        
+                        z-index: 999;
+                    }
+                    &::-webkit-scrollbar {
+                        width:6px
+                    }
+               
+                
+            }
+           
+            
+        }
+        .songDetail_right {
+            grid-area: right;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                font-weight: 600;
+            }
+                .simplePlaylist {
+                    .simiPlaylistItem {
+                        :hover {
+                            cursor: pointer;
+                            background-color: #EBECEC;
+                        }
+                        .simiPlaylistItem_img {
+                            width:2.5rem;
+                            height: 2.5rem;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            
+        }
+       
+    }
+    .songDetail_bottom {
+        
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+   
+    }
+
+}
+

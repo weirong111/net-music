@@ -1,0 +1,40 @@
+.myVideo {
+
+    .myVideo_content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        justify-content: space-evenly;
+        grid-gap: 10px;
+        .myVideo_item {
+            cursor: pointer;
+            width: 250px;
+            .myVideo_item_cover {
+                position: relative;
+                img {
+                    width:250px;
+                    height: 140px;
+                    border-radius: 10px;
+                }
+                .myVideo_item_tag {
+                    position: absolute;
+                    right:5px;
+                    top:0px;
+                    color:white;
+                    font-weight: 500;
+                    
+                }
+               
+            }
+            .myVideo_item_title {
+                width:200px;
+                color: #888;
+                font-size: 12px;
+                text-overflow: ellipsis;
+            }
+            .myVideo_item_artist {
+                font-size: 12px;
+                color:#888
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.RecommendSong {
+    margin-top: 1rem;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: 12rem 12rem 12rem 12rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    row-gap: 3rem;
+    .recommend_item {
+        .recommend_wrap_img {
+            width:12rem;
+            cursor: pointer;
+            position: relative;
+            img {
+                width:12rem;
+                height:12rem;
+                border-radius: 10px;
+            }
+            .recommend_item_count {
+                position: absolute;
+                top:0px;
+                right: 10px;
+                color:white
+                
+            }
+        }
+
+        .recommend_name {
+            width: 12rem;
+        }
+    }
+}

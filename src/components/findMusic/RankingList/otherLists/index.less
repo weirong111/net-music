@@ -1,0 +1,30 @@
+.otherLists {
+    .playListdown_title {
+        font-weight: 600;
+        font-size: 1.125rem;
+    }
+    .playListdown_main {
+        display: grid;
+        gap:10px;
+        grid-template-columns: repeat(auto-fill ,250px);
+        .otherLists_item {
+            cursor: pointer;
+            .otherLists_item_top {
+                position: relative;
+                img {
+                    width:250px;
+                    height:250px;
+                    border-radius: 10px;
+                }
+                .otherLists_item_top_playCount {
+                    position: absolute;
+                    right:5px;
+                    top:5px;
+                    color: white;
+                }
+
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.singerMv {
+
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 10px;
+    .mv_item {
+     cursor: pointer;
+     .item_up {
+        position: relative;
+        .mv_img {
+            width:250px;
+            height:150px;
+            border-radius: 10px;
+        }
+        .mv_time {
+            position: absolute;
+            right:10px;
+            top:120px;
+            color: white;
+        }
+        .mv_playCount {
+            position: absolute;
+            right:10px;
+            top:0px;
+            color:white
+        }
+     }
+       
+    }
+}
+
+.scroll {
+    overflow-y: scroll!important;
+    height: calc(100vh  - 9.7rem);
+}

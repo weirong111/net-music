@@ -1,0 +1,53 @@
+.myAlbum {
+    .myAlbum_title {
+        font-size: 24px;
+        font-weight: 600;
+        margin:10px;
+       
+    }
+    .myAlbum_length {
+        color: #888;
+    }
+    .zhuangji_item {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background-color: #F1F2F3;
+        }
+        margin-bottom: 10px;
+        .album_item_left {
+            flex:1;
+            .album_img_set {
+                position: relative;
+            }
+            .img_blur {
+               width:70px;
+               height:70px
+    
+            }
+            .img_album_item {
+    
+                position: absolute;
+                width:60px;
+                height:60px;
+                left:0px;
+                top:5px;
+                border-radius: 5px;
+            }
+        }
+        .album_item_right {
+            flex:1;
+           color:#888
+        }
+    }
+    .item_odd {
+        background-color: #FAFAFA;
+    }
+    
+    .album_Pagination {
+       display: flex;
+       justify-content: center;
+    }
+}

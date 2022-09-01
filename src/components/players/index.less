@@ -1,0 +1,127 @@
+.player {
+    width:100%;
+    height:3.8rem;
+    box-sizing: border-box;
+    position: fixed;
+    bottom:0px;
+    border:1px solid #E0E0E0;
+    z-index:999;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    .player_left {
+        width:25%;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+       
+        .player_left_img {
+            margin-right: 10px;
+            img {
+                width:50px;
+                height: 50px;
+                border-radius: 5px;
+            }
+        }
+        .player_left_name {
+            padding: 5px;
+            margin-right: 10px;
+   
+            .player_left_ar {
+                color:#888
+            }
+        }
+        
+    }
+    .player_center {
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        .player_center_icon {
+            transform: translateY(5px);
+            padding-top: 5px;
+            img {
+                width:20px;
+                height:20px;
+                background-color: #888;
+            }
+            .player_center_icon_item_wrap {
+                width:30px;
+                height:30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #F5F5F5;
+                border-radius: 50%;
+
+            }
+            .player_center_icon_item:hover {
+                cursor: pointer;
+                color:#d43c33
+            }
+            .player_center_lyric {
+                cursor: pointer;
+            }
+            .player_center_lyric:hover {
+                color:#d43c33;
+               
+
+            }
+            .select_lyric {
+                color:#d43c33;  
+            }
+            
+        }
+        .player_center_progress {
+            width:300px;
+            position: relative;
+            span {
+                position: absolute;
+                right:-45px;
+                top:3px;
+            }
+            .player_center_progress_playTime {
+                position: absolute;
+                left:-45px;
+                top:3px
+            }
+            
+        }
+    }
+    .player_right {
+        width:25%;
+        padding-right: 20px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        font-size: 20px;
+        .ant-drawer-body {
+            .drawer_content {
+                .drawer_content_title {
+                    position: relative;
+                    .num {
+                        position: absolute;
+                        left:10px
+                    }
+                    .collect {
+                        position: absolute;
+                        right:10px
+                    }
+                }
+
+            }
+        }
+        
+    }
+
+
+}
+.player_lyric {
+    font-size: 1rem;
+    color:#CAE6F3;
+    z-index: 1001;
+    transform: translateX(-50%) translateY(-50%);  
+}

@@ -1,0 +1,21 @@
+.singerHeader {
+    height:calc(100vh - 12rem);
+    overflow-y: scroll;
+    .singerHeader_tag {
+        margin-bottom: 8px;
+    }
+    .singerHeader_main {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(auto-fill ,200px);
+        gap:20px;
+        .singer_item {
+            img {
+                width:200px;
+                height:200px;
+                border-radius: 10px;
+            }
+        }
+    }
+   
+}

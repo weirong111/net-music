@@ -1,0 +1,41 @@
+.songMenusContent {
+    height:calc(100vh - 14rem);
+    overflow-y: scroll;
+    .songMenusContent_main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,250px);
+       margin-top: 10px;
+        gap:10px;
+        .songMenusContent_item {
+            cursor: pointer;
+            .songMenusContent_item_up {
+                position: relative;
+                img {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 10px;
+
+                }
+                .songMenusContent_item_up_topRight {
+                    position: absolute;
+                    top:4px;
+                    right:4px;
+                    color: white;
+                    font-weight: 500;
+                }
+                .songMenusContent_item_up_leftBottom {
+                    position: absolute;
+                    left:4px;
+                    bottom: 4px;
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .songMenusContent_main_pa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

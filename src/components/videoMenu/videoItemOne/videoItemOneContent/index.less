@@ -1,0 +1,45 @@
+.VideoItemOneContent {
+    .VideoItemOneContent_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,250px);
+        justify-content: center;
+      
+        gap: 10px;
+        .VideoItemOneContent_item {
+            cursor: pointer;
+            width: 250px;
+            .VideoItemOneContent_item_top {
+                position: relative;
+                img {
+                    width: 250px;
+                    height:160px;
+                    border-radius: 10px;
+                }
+                .VideoItemOneContent_item_top_creator {
+                    position: absolute;
+                    bottom: 0px;
+                    right: 4px;
+                    color: white;
+                }
+                .VideoItemOneContent_item_top_playTime {
+                    position: absolute;
+                    top:0px;
+                    right:4px;
+                    color: white;
+                }
+
+            }
+            .VideoItemOneContent_item_down {
+                width: 100%;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                
+            }
+            .VideoItemOneContent_item_down_nickname {
+                font-size: 10px;
+                color:#888
+            }
+        }
+    }
+}

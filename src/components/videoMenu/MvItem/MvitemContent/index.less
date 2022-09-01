@@ -1,0 +1,41 @@
+.MvitemContent {
+    margin-top: 10px;
+    .VideoItemOneContent_grid {
+        display: grid;
+        justify-content: center;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill,250px);
+        .MvitemContent_item {
+            width:250px;
+
+            .MvitemContent_item_up {
+                position: relative;
+                img {
+                    width:250px;
+                    height:140px;
+                    border-radius: 10px;
+                }  
+                .MvitemContent_item_up_playCount {
+                    position: absolute;
+                    color:white;
+                    right:4px;
+                    top:0px;
+                }
+            } 
+            .MvitemContent_item_name {  
+                width:100%;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+            }
+            .MvitemContent_item_artists {
+                width:100%;
+                font-size: 12px;
+                color:#888;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+            }
+        }
+    }
+}

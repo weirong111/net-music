@@ -1,0 +1,62 @@
+.fourList {
+  
+    .playLists_item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        
+        .playLists_item_left {
+            margin-right: 20px;
+            position: relative;
+            img {
+                width:200px;
+                height: 200px;
+                border-radius: 10px;
+            }
+            div {
+                position: absolute;
+                top:65%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                font-size: 14px;
+            }
+        }
+        .playLists_item_right {
+            flex:1;
+            .playLists_item_right_table {
+                color: #888888;
+                cursor: pointer;
+            }
+            .song_all {
+                cursor: pointer;
+                font-size: 12px;
+                color:#888888;
+                &:hover {
+                    color:#323232
+                }
+
+            }
+        }
+    }
+}
+.song_desc {
+    color:#888888;
+    font-size: 12px;
+   }
+   .song_title {
+    font-size: 12px;
+    color:#323232
+   }
+   .even {
+    background-color: white;
+   }
+   .odd {
+    background-color: #FAFAFA;
+   }
+   .selectRow {
+    background-color: #E5E5E5;
+    .song_title {
+        color:#d43c33
+    }
+   }

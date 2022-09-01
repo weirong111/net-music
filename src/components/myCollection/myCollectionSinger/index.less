@@ -1,0 +1,49 @@
+.myArtist {
+    overflow-y: scroll;
+    height: calc(100vh - 9.4rem);
+    .myArtist_title {
+        font-size: 24px;
+        font-weight: 600px;
+    }
+    .myArtist_length {
+        color:#888;
+    }
+    
+    .zhuangji_item {
+        display: flex;
+        height:80px;
+        justify-content: start;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background-color: #F1F2F3;
+        }
+        margin-bottom: 10px;
+        .album_item_left {
+            flex:2;
+           
+          
+            .img_album_item {
+                width:60px;
+                height:60px;
+                border-radius: 5px;
+            }
+        }
+        .album_item_right {
+        flex:1;
+           color:#888
+        }
+        .album_item_center {
+            flex:1;
+            color:#888;
+        }
+    }
+    .item_odd {
+        background-color: #FAFAFA;
+    }
+    
+    .album_Pagination {
+       display: flex;
+       justify-content: center;
+    }
+}

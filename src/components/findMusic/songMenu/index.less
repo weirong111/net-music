@@ -1,0 +1,43 @@
+.songMenus {
+    padding: 20px;
+    .songMenus_Header {
+       display: flex;
+       justify-content: space-between;
+   
+    }
+}
+
+.tag_item {
+    width: 600px!important;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+    
+    .tag_item_left {
+        width:80px;
+        color:#888
+    }
+    .tag_item_right {
+        flex:1;
+        display: grid;
+        // justify-content: center;
+        // align-items: center;
+        place-items: center;
+        gap: 10px;
+        grid-template-columns: repeat(6, 70px);
+        .tag_item_right_name {
+            
+            color:rgba(0, 0, 0, 0.85);
+            cursor: pointer;
+            &:hover {
+                color:#d43c33
+            }
+        }
+    }
+    .selectItem {
+        background-color: #FEF5F5;
+        border-radius: 5px;
+        color: #d43c33!important;;
+    }
+
+}
