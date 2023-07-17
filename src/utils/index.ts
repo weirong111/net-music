@@ -1,27 +1,23 @@
-export const formatLyric = (str: string) => {
-  const arr = str.split("\n");
+export interface LyricItem {
+  time: number;
+  text: string;
+}
 
-  const help = [];
-  for (let item of arr) {
-    const itemArray = [];
-    const reg = /\[(.+?)\]/g;
-    const hel = item.match(reg);
+export const formatLyric = (str: string): LyricItem[] => {
+  const lines = str.split("\n");
+  const lyric: LyricItem[] = [];
 
-    if (!hel) continue;
-    else {
-      const time = item.slice(1, 9).split(":");
-      const formatTime =
-        parseInt(time[0]) * 60 * 1000 + parseFloat(time[1]) * 1000;
-      itemArray.push(formatTime);
+  const timeReg = /\[(\d{2}):(\d{2}\.\d{3})\]/;
+  for (const line of lines) {
+    const matches = line.match(timeReg);
+    if (!matches) continue;
+
+    const time = parseInt(matches[1]) * 60 * 1000 + parseFloat(matches[2]) * 1000;
+    const text = line.substring(line.lastIndexOf("]") + 1).trim();
+    if (text) {
+      lyric.push({ time, text });
     }
-    const index = item.lastIndexOf("]");
-    if (index === -1) continue;
-    else {
-      const st = item.substring(index + 1);
-      if (!!!st) continue;
-      itemArray.push(st);
-    }
-    help.push(itemArray);
   }
-  return help;
+
+  return lyric;
 };
