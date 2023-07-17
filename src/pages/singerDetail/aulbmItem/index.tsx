@@ -77,24 +77,39 @@ const AulbmItem: FC<IProps> = ({ id }) => {
   const { state, dispatch } = useContext(Context);
   const { currentSong, player, songList } = state;
   const clickSongs = async (record: { [key: string]: any }, index: number) => {
-    if (record.id === currentSong.id) return;
-    if (allSongs !== songList)
-      dispatch({ action: "SONG", type: "SETSONGLIST", data: allSongs });
-    const check = await reqCheckMusic(record.id);
-    if (!check.success) {
-      message.warn(check.message);
+    if (record.id === currentSong.id) {
       return;
     }
-    const data = await reqGetMp3(record.id);
-    localStorage.setItem(record.id, data.data[0].url);
-    record.url = data.data[0].url;
-    record.index = index;
-    dispatch({ action: "SONG", type: "SETCURRENTSONG", data: record });
+  
+    const isSongListChanged = allSongs !== songList;
+    if (isSongListChanged) {
+      dispatch({ type: "SETSONGLIST", data: allSongs });
+    }
+  
+    const checkMusicResult = await reqCheckMusic(record.id);
+    if (!checkMusicResult.success) {
+      message.warn(checkMusicResult.message);
+      return;
+    }
+  
+    const mp3Result = await reqGetMp3(record.id);
+    localStorage.setItem(record.id, mp3Result.data[0].url);
+  
+    const updatedRecord = {
+      ...record,
+      url: mp3Result.data[0].url,
+      index: index
+    };
+  
+    dispatch({ type: "SETCURRENTSONG", data: updatedRecord });
+  
     if (player && player.ref) {
       const audio = player.ref;
       audio.load();
     }
-    dispatch({ action: "SONG", type: "SETISPLAYING", data: true });
+  
+    dispatch({ type: "SETISPLAYING", data: true });
+  
     getLyricAndFormat(record.id);
   };
   const getLyricAndFormat = async (id: string) => {
